@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import './App.css'
+
 import { Layout ,Typography, theme} from 'antd'
 import { HeaderTop, SideBar } from './components';
 import RouteNavigation from './components/routes/Routess';
