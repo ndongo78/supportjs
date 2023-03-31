@@ -5,6 +5,7 @@ import Employes from '../employes/Employes'
 import Syntaxe from '../js/Syntaxe'
 import Variables from '../js/Variables'
 import Operators from '../js/Operators'
+import Functions from '../js/Fonctions'
 
 export const RouteNavigation = () => {
   return (
@@ -13,6 +14,7 @@ export const RouteNavigation = () => {
      <Route  path='/syntaxe' element={<Syntaxe/>}  />
      <Route  path='/variables' element={<Variables/>}  />
      <Route  path='/operators' element={<Operators/>}  />
+     <Route  path='/functions' element={<Functions/>}  />
     </Routes>
   )
 }
