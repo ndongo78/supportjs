@@ -1,7 +1,7 @@
 import React from "react"
 import Prism from "prismjs"
 
-export const CodeBlock=({className, children})=>{
+export const CodeBlock=( {children}:any)=>{
   
   
 
@@ -12,9 +12,9 @@ React.useEffect(()=>{
   },[])
   
   return (
-     <div className="flex flex-cols m-4 rounded">
-     <pre>
-     <code className={`language-javascript`}>
+     <div className="flex flex-cols m-5 text-xl justify-start items-start">
+     <pre >
+     <code className={`language-javascript`} >
       {children}
       </code>
      </pre>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { CodeBlock } from '../CodeBlock'
 
 
 
@@ -49,22 +50,21 @@ const HomeScreen = () => {
       <h2 className='text-2xl font-bold m-5'>Comment ajouter du JavaScript à votre page</h2>
       <div className='m-6 text-xl'>
       Pour ajouter du JavaScript à un document HTML, il n'y a qu'une seule façon : avec l'élément <span className='text-red-600'> &lt;script  &gt; </span> . Voyons cela sur un exemple.
-      <div className="exp bg-[#e1dddd] w-8/12">
-       <div className='m-4 '>
-       &lt;<span className='text-red-600'>script</span> &gt;
-        <br/>
-        <br/>
-       <p className=' opacity-20'> // ecrire ici le code javascript </p>
-       <br/>
-       &lt;/<span className='text-red-600'>script</span> &gt;
-       </div>
+      <div className="edit">
+<CodeBlock >
+{
+`<script> 
+// ecrire ici votre code javascript
+</script>`
+}
+</CodeBlock>
       </div>
        Vous pouvez aussi ajouter un fichier externe voici un exemple
-       <div className="exp bg-[#e1dddd] w-8/12">
-       <div className='m-4 '>
-       &lt;<span className='text-red-600'>script</span> src="/app.js"&gt; &lt;/<span className='text-red-600'>script</span> &gt;
-       </div>
-      </div>
+<CodeBlock>
+{
+`<script src="/app.js"> </script>`
+}
+</CodeBlock>
       </div>
     </div>
   )

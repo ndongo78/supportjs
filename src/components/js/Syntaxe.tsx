@@ -1,4 +1,5 @@
 import React from 'react'
+import { CodeBlock } from '../CodeBlock'
 
 const Syntaxe = () => {
   return (
@@ -18,19 +19,18 @@ const Syntaxe = () => {
        Elles permettent de stocker des valeurs, telles que des nombres, des chaînes de caractères ou des booléens. Pour créer une variable en JavaScript, on utilise le mot-clé var,let,const, suivi du nom de la variable, suivi éventuellement d'une valeur 
        </p>
        </div>
-       <div className="editor bg-[#e1dddd] w-8/12 m-5">
-        <div className='m-5 p-4'>
-          <p className=''>Comment créer une variable</p>
-        <span className='text-blue-400 font-bold'>var</span> n; <br />
-        <span className='text-blue-400 font-bold'>let</span> y;
-        </div>
-        <div className='m-5 p-4'>
-          <p className=''>Comment utilisé une variable</p>
-          n = 1; <br />
-          y = 3; <br />
-          <span className='text-blue-400 font-bold'>let</span> x= n + y;
-        </div>
-       </div>
+<CodeBlock>
+{`
+//Comment créer une variable
+var n;
+let x;
+//Comment utilisé une variable
+n=1;
+x=3;
+let y= n + x ;
+console.log(y); //afficher la value x dans la console
+`}
+</CodeBlock>
        <div className="">
        <h3 className='text-xl font-bold m-5 text-blue-600'>Les opérateurs:</h3>
        <p className='text-xl m-2'>
@@ -41,43 +41,42 @@ const Syntaxe = () => {
        <h3 className='text-xl font-bold m-5 text-blue-600'>Les conditions :</h3>
        <p className='text-xl m-2'>
        Elles permettent d'exécuter une partie de code seulement si une certaine condition est remplie. Pour cela, on utilise le mot-clé if, suivi de la condition entre parenthèses et du code à exécuter entre accolades :
-       <br />
-       <div className="bg-[#e1dddd] w-8/12 m-5">
-        <div className="m-5 p-5">
-        <span className='text-red-600'>if</span> (myVariable &gt; 10) &#123;<br />
-       <p>console.log("Ma variable est supérieure à 10");</p> 
-        &#125;
-        </div>
-       </div>
        </p>
+<CodeBlock>
+{`
+if(myVariable > 10){
+console.log("Ma variable est supérieure à 10");
+}
+`}
+</CodeBlock>
+      
        </div>
        <div className="">
        <h3 className='text-xl font-bold m-5 text-blue-600'>Les boucles :</h3>
        <p className='text-xl m-2'>
        Elles permettent de répéter une partie de code un certain nombre de fois, ou tant qu'une certaine condition est remplie. En JavaScript, on utilise souvent la boucle for, while, do while ,
-        <br />
-       <div className="bg-[#e1dddd] w-8/12 m-5">
-        <div className="m-5 p-5">
-        <span className='text-red-600'>for</span> (var i=0; i &lt; 10; i++) &#123;<br />
-        <p>console.log("La variable i vaut " + i);</p> 
-        &#125;
-        </div>
-       </div>
-       </p>
+      </p>
+<CodeBlock>
+{`
+for(var i = 0; i < 10){
+console.log("La variable i vaut " + i);
+}
+`}
+</CodeBlock>
        </div>
        <div className="">
        <h3 className='text-xl font-bold m-5 text-blue-600'>Les fonctions :</h3>
        <p className='text-xl m-2'>
        Elles permettent de regrouper du code qui peut être réutilisé plusieurs fois dans le programme. Pour créer une fonction en JavaScript, on utilise le mot-clé function, suivi du nom de la fonction, des paramètres entre parenthèses et du code à exécuter entre accolades :
-        <br />
-       <div className="bg-[#e1dddd] w-8/12 m-5">
-        <div className="m-5 p-5">
-        function <span className='text-red-600'>maFunction</span> (parametre1,parametre2) &#123;<br />
-        <p>  console.log("La fonction a été appelée avec les paramètres " + parametre1 + " et " + parametre2);</p> 
-        &#125;
-        </div>
-       </div>
-       </p>
+        </p>
+<CodeBlock>
+{`
+function maFunction(parametre1,parametre2){
+console.log("La fonction a été appelée avec les paramètres " 
++ parametre1 + " et " + parametre2);
+}
+`}
+</CodeBlock>
        </div>
       </div>
     </div>
