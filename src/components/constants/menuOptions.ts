@@ -10,4 +10,10 @@ export const menuItems=[
     {name:"Numbers en JavaScript",link:"/number"},
     {name:"Objets en JavaScript",link:"/object"},
     {name:"Tableaux en JavaScript",link:"/array"},
+    {name:"Sets et Maps en JavaScript",link:"/setmap"},
+    {name:"Boucles en JavaScript",link:"/boucle"},
+    {name:"Callback  en JavaScript",link:"/callback"},
+]
+export const domMenus = [
+    {name:"Introduction au DOM",link:"/introduction"},
 ]

@@ -12,6 +12,7 @@ const {Title}=Typography;
 function App() {
   const [count, setCount] = useState(0)
   const [collapsed, setCollapsed] = useState(false);
+  const [selectTech, setSelectTech] = useState("Javascript");
   const navigate=useNavigate()
 
   const handleNavigate = (key:string) =>navigate(key)
@@ -21,9 +22,18 @@ function App() {
 
   return (
     <Layout style={{backgroundColor:colorBgContainer}}>
-      <SideBar collapsed={collapsed} handleNavigate={handleNavigate} />
+      <SideBar 
+       collapsed={collapsed} 
+       handleNavigate={handleNavigate} 
+       selectTech={selectTech}
+       />
       <Layout >
-      <HeaderTop collapsed={collapsed} setCollapsed={setCollapsed} />
+      <HeaderTop 
+      collapsed={collapsed} 
+      setCollapsed={setCollapsed}
+      setSelectTech={setSelectTech}
+      selectTech={selectTech}
+       />
       <Content className='m-3 shrink rounded-xl content'>
         <RouteNavigation />
       </Content>

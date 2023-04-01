@@ -10,6 +10,10 @@ import Objects from '../js/Objects'
 import Strings from '../js/Strings'
 import Numbers from '../js/Numbers'
 import Arrays from '../js/Arrays'
+import Boucles from '../js/Boucles'
+import SetMap from '../js/SetMap'
+import Callbacks from '../js/Callbacks'
+import Introduction from '../js/dom/Introduction'
 
 export const RouteNavigation = () => {
   return (
@@ -23,6 +27,10 @@ export const RouteNavigation = () => {
      <Route  path='/number' element={<Numbers/>}  />
      <Route  path='/object' element={<Objects/>}  />
      <Route  path='/array' element={<Arrays/>}  />
+     <Route  path='/boucle' element={<Boucles/>}  />
+     <Route  path='/setmap' element={<SetMap/>}  />
+     <Route  path='/callback' element={<Callbacks/>}  />
+     <Route  path='/introduction' element={<Introduction/>}  />
     </Routes>
   )
 }
