@@ -6,6 +6,8 @@ export const menuItems=[
     {name:"Variables et types de données",link:"/variables"},
     {name:"Opérateurs",link:"/operators"},
     {name:"Fonctions JavaScript",link:"/functions"},
+    {name:"Chaînes de caractères en JavaScript",link:"/string"},
+    {name:"Numbers en JavaScript",link:"/number"},
     {name:"Objets en JavaScript",link:"/object"},
     {name:"Tableaux en JavaScript",link:"/array"},
 ]

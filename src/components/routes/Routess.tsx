@@ -7,6 +7,8 @@ import Variables from '../js/Variables'
 import Operators from '../js/Operators'
 import Functions from '../js/Fonctions'
 import Objects from '../js/Objects'
+import Strings from '../js/Strings'
+import Numbers from '../js/Numbers'
 import Arrays from '../js/Arrays'
 
 export const RouteNavigation = () => {
@@ -17,6 +19,8 @@ export const RouteNavigation = () => {
      <Route  path='/variables' element={<Variables/>}  />
      <Route  path='/operators' element={<Operators/>}  />
      <Route  path='/functions' element={<Functions/>}  />
+     <Route  path='/string' element={<Strings/>}  />
+     <Route  path='/number' element={<Numbers/>}  />
      <Route  path='/object' element={<Objects/>}  />
      <Route  path='/array' element={<Arrays/>}  />
     </Routes>
