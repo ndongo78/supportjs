@@ -17,7 +17,8 @@ const person = {
     lastName: "Doe",
     age: 50,
     eyeColor: "blue",
-    sayHello:()=>console.log("Hello" + person.firstName),
+    sayHello:function(){
+    console.log("Hello" + this.firstName)},
 };
 `}
 </CodeBlock>
@@ -25,11 +26,40 @@ const person = {
   <div className='m-4'>
     <h2 className="text-2xl font-bold m-5">Accéder aux propriétés de l'objet</h2>
   <p>Pour accéder aux propriétés d'un objet en utilisant la notation pointée ou la notation crochetée</p>
+  <br/>
     <p> Par exemple, pour accéder à la propriété firstName de notre objet person, nous pouvons écrire :</p>
 <CodeBlock>
     {`
+// notation point (.) Le plus souvent utile 
+    
 console.log(person.firstName); // affiche "john"
     `}
+</CodeBlock>
+<br/>
+<p>ou bien :</p>
+<CodeBlock>
+    {`
+// notation point [] rarement utilisé 
+    
+console.log(person["firstName"]); // affiche "john"
+    `}
+</CodeBlock>
+   <h3 className='text-xl font-bold m-5 text-blue-600'>L'ajout dans Object</h3>
+    <p>Exemple d'ajout dans l'object</p>
+<CodeBlock>
+{`
+ person.nationality = "Française";
+ //ici on ajoute dans l'object la propriété nationality et value Française 
+`}
+</CodeBlock>
+   <h3 className='text-xl font-bold m-5 text-blue-600'>Supprimer dans Object</h3>
+    <p>
+    <span className={"text-red-600"}> delete </span>  supprime une propriété d'un objet</p>
+<CodeBlock>
+{`
+ delete person.eyeColor;
+ //Cela supprime eyeColor dans l'objet 
+`}
 </CodeBlock>
     </div>
     
