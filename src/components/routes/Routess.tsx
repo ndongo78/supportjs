@@ -14,6 +14,8 @@ import Boucles from '../js/Boucles'
 import SetMap from '../js/SetMap'
 import Callbacks from '../js/Callbacks'
 import Introduction from '../js/dom/Introduction'
+import Modifier from '../js/dom/Modifier'
+import Evenements from '../js/dom/Evenements'
 
 export const RouteNavigation = () => {
   return (
@@ -31,6 +33,8 @@ export const RouteNavigation = () => {
      <Route  path='/setmap' element={<SetMap/>}  />
      <Route  path='/callback' element={<Callbacks/>}  />
      <Route  path='/introduction' element={<Introduction/>}  />
+     <Route  path='/change' element={<Modifier/>}  />
+     <Route  path='/events' element={<Evenements/>}  />
     </Routes>
   )
 }

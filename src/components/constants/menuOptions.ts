@@ -16,4 +16,6 @@ export const menuItems=[
 ]
 export const domMenus = [
     {name:"Introduction au DOM",link:"/introduction"},
+    {name:"Manipulation du contenu du DOM",link:"/change"},
+    {name:"Evénements du DOM",link:"/events"},
 ]
