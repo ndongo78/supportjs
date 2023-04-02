@@ -28,7 +28,11 @@
   object-fit: contain;
   background-repeat: no-repeat;
 }
-
+.login {
+  background-image: url("../src/assets/bg.png");
+  object-fit: contain;
+  background-repeat: no-repeat;
+}
 *{
   box-sizing: border-box;
   margin: 0;

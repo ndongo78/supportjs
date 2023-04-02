@@ -1,5 +1,5 @@
 export const menuItems=[
-    {name:"Qu'est-ce que JavaScript ?",link:"/"},
+    {name:"Qu'est-ce que JavaScript ?",link:"/intro"},
     // {name:"Histoire de JavaScript",link:"/history"},
     // {name:"Pourquoi utiliser JavaScript ?",link:"/why"},
     {name:"Syntaxe de base",link:"/syntaxe"},
