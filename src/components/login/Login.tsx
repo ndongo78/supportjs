@@ -3,9 +3,10 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import logo from "../../assets/logo.png"
 
-const Login: React.FC = () => {
+const Login: React.FC = ({loginUser}) => {
   const onFinish = (values: any) => {
-    console.log('Received values of form: ', values);
+    loginUser(values)
+   //console.log('Received values of form: ', values);
   };
 
   return (
@@ -23,9 +24,9 @@ const Login: React.FC = () => {
     </div>
     <p className='text-center text-white font-bold'>S'identifier </p>
       <Form.Item
-        name="username"
+        name="email"
         
-        rules={[{ required: true, message: 'Please input your Username!' }]}
+        rules={[{ required: true, message: 'Please input your email!' }]}
       >
         <Input className='w-56 p-2' prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
       </Form.Item>

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 import { Layout ,Typography, theme} from 'antd'
 import { HeaderTop, SideBar } from './components';
@@ -20,7 +20,34 @@ function App() {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-
+  const loginUser=async (values)=>{
+    
+      fetch("https://support-fsro.onrender.com/api/user/login" ,{
+          method: "POST",
+          body:JSON.stringify(values),
+          headers:{
+            "Content-type":"application/json; chartset=UTF-8"
+          }
+        })
+        .then(response=> response.json())   
+        .then(data=>{
+          if (data.email){
+            setUser(data)
+            navigate('/intro')
+          }
+       // console.log("response", data)
+        }
+        )
+       .catch(error=>console.log("error",error))
+  }
+  
+  useEffect (()=>{
+    if(!user) {
+      navigate("/")
+    }
+  },[user])
+  
+  
   return (
     <>
     {
@@ -45,7 +72,7 @@ function App() {
       </Layout>
     </Layout>
     :
-    <Routes><Route  path='/' element={<Login/>}  /></Routes>
+    <Routes><Route  path='/' element={<Login loginUser={loginUser}/>}  /></Routes>
     }
     </>
   )
