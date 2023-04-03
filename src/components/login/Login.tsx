@@ -3,7 +3,7 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import logo from "../../assets/logo.png"
 
-const Login: React.FC = ({loginUser}) => {
+const Login: React.FC = ({loginUser}:any) => {
   const onFinish = (values: any) => {
     loginUser(values)
    //console.log('Received values of form: ', values);
