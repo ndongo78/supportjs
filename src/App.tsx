@@ -20,7 +20,7 @@ function App() {
   const {
     token: { colorBgContainer },
   } = theme.useToken();
-  const loginUser=async (values)=>{
+  const loginUser=async (values:any)=>{
     
       fetch("https://support-fsro.onrender.com/api/user/login" ,{
           method: "POST",
