@@ -3,7 +3,7 @@ import { LockOutlined, UserOutlined } from '@ant-design/icons';
 import { Button, Checkbox, Form, Input } from 'antd';
 import logo from "../../assets/logo.png"
 
-type Props{
+type Props={
   loginUser:(v:any)=>void
 }
 
