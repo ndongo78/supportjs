@@ -65,6 +65,7 @@ function App() {
       setCollapsed={setCollapsed}
       setSelectTech={setSelectTech}
       selectTech={selectTech}
+      user={user}
        />
       <Content className='m-3 shrink rounded-xl content'>
         <RouteNavigation />

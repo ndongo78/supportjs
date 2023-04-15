@@ -13,9 +13,10 @@ interface Props{
     collapsed:boolean,
     setCollapsed:(t:boolean) => void
     setSelectTech:React.Dispatch<React.SetStateAction<string>>
-    selectTech:string
+    selectTech:string,
+    user:any
 }
-export const HeaderTop:FC<Props> = ({collapsed,setCollapsed,setSelectTech,selectTech}) => {
+export const HeaderTop:FC<Props> = ({collapsed,setCollapsed,setSelectTech,selectTech,user}) => {
    
     const {
       token: { colorBgContainer },
@@ -50,10 +51,10 @@ export const HeaderTop:FC<Props> = ({collapsed,setCollapsed,setSelectTech,select
           <Button onClick={()=>setSelectTech("Nextjs")} className={`w-50 text-2xl m-2 p-4 items-center flex h-10 ${selectTech ==='Nextjs' && "bg-green-400 "}` } icon={<SiNextdotjs color='#3434da' />}> <span className='ml-2 text-2xl'>Nextjs</span></Button>
           <Button onClick={()=>setSelectTech("Nodejs")} className={`w-50 text-2xl m-2 p-4 items-center flex h-10 ${selectTech ==='Nodejs' && "bg-green-400 "}` } icon={<SiNodedotjs color='#1dd058' />}> <span className='ml-2 text-2xl'>Nodejs</span></Button>
           </div>
-          <div className='flex '>
-            <div className='flex text-white items-center'>
-              <p className=' text-xl font-bold mr-5'>Bonjour John Doe</p>
+          <div className='flex items-center justify-center'>
+            <div className='flex text-black items-center flex-col justify-center'>
               <Avatar src="https://picsum.photos/200" size={50} />
+              <p className=' text-xl font-semibold ml-14 '>Bonjour Ndongo</p>
             </div>
           </div>
     </Header>
