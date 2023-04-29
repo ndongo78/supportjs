@@ -1,7 +1,6 @@
 import React from 'react'
 import {Route, Routes} from "react-router-dom"
 import HomeScreen from '../home/HomeScreen'
-import Employes from '../employes/Employes'
 import Syntaxe from '../js/Syntaxe'
 import Variables from '../js/Variables'
 import Operators from '../js/Operators'
