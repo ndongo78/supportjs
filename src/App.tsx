@@ -13,7 +13,8 @@ function App() {
   const [count, setCount] = useState(0)
   const [collapsed, setCollapsed] = useState(false);
   const [selectTech, setSelectTech] = useState("Javascript");
-  const [user,setUser] = useState(null); //{user: "billy",email:"billy@gmail.com"}
+ // const [user,setUser] = useState(null); 
+ const user= {user: "billy",email:"billy@gmail.com"}
   const navigate=useNavigate()
 
   const handleNavigate = (key:string) =>navigate(key)
@@ -22,30 +23,30 @@ function App() {
   } = theme.useToken();
   const loginUser=async (values:any)=>{
     
-      fetch("https://support-fsro.onrender.com/api/user/login" ,{
-          method: "POST",
-          body:JSON.stringify(values),
-          headers:{
-            "Content-type":"application/json; chartset=UTF-8"
-          }
-        })
-        .then(response=> response.json())   
-        .then(data=>{
-          if (data.email){
-            setUser(data)
-            navigate('/intro')
-          }
-       // console.log("response", data)
-        }
-        )
-       .catch(error=>console.log("error",error))
+      // fetch("https://support-fsro.onrender.com/api/user/login" ,{
+      //     method: "POST",
+      //     body:JSON.stringify(values),
+      //     headers:{
+      //       "Content-type":"application/json; chartset=UTF-8"
+      //     }
+      //   })
+      //   .then(response=> response.json())   
+      //   .then(data=>{
+      //     if (data.email){
+      //       setUser(data)
+      //       navigate('/intro')
+      //     }
+      // // console.log("response", data)
+      //   }
+      //   )
+      // .catch(error=>console.log("error",error))
   }
   
-  useEffect (()=>{
+/*  useEffect (()=>{
     if(!user) {
       navigate("/")
     }
-  },[user])
+  },[user])*/
   
   
   return (
