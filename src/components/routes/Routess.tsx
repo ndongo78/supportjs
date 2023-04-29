@@ -26,12 +26,12 @@ export const RouteNavigation = () => {
      <Route  path='/syntaxe' element={<Syntaxe/>}  />
      <Route  path='/variables' element={<Variables/>}  />
      <Route  path='/operators' element={<Operators/>}  />
+     <Route  path='/boucle' element={<Boucles/>}  />
      <Route  path='/functions' element={<Functions/>}  />
      <Route  path='/string' element={<Strings/>}  />
      <Route  path='/number' element={<Numbers/>}  />
      <Route  path='/object' element={<Objects/>}  />
      <Route  path='/array' element={<Arrays/>}  />
-     <Route  path='/boucle' element={<Boucles/>}  />
      <Route  path='/setmap' element={<SetMap/>}  />
      <Route  path='/callback' element={<Callbacks/>}  />
      <Route  path='/introduction' element={<Introduction/>}  />

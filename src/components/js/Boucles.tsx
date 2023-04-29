@@ -72,6 +72,33 @@ i++;
 while (i < 10);
 `}
 </CodeBlock>
+<h3 className='text-2xl font-bold m-3 text-blue-500'>La boucle switch</h3>
+<p>
+Une instruction switch peut remplacer plusieurs vérification if.
+<br />
+Cela donne un moyen plus descriptif de comparer une valeur avec plusieurs variantes.
+
+<CodeBlock>
+{`
+let a = 2 + 2;
+
+switch (a) {
+  case 3:
+    alert( 'Too small' );
+    break;
+  case 4:
+    alert( 'Exactly!' );
+    break;
+  case 5:
+    alert( 'Too big' );
+    break;
+  default:
+    alert( "I don't know such values" );
+}
+`}
+</CodeBlock>
+</p>
+
     </div>
     </div>
   )

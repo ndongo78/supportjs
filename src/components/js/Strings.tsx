@@ -16,7 +16,7 @@ let carName = 'Volvo XC60';
 `}
 </CodeBlock>
   <h2 className="text-2xl font-bold m-5">Strings  et méthodes</h2>
-  <span className="text-xl text-red-600 font-bold m-5">length</span> : <span>cette méthode renvoie la longueur du chaine </span>
+  <span className="text-xl text-red-600 font-bold m-5">length</span> : <span><p>cette méthode renvoie la longueur du chaine </p> </span>
    <CodeBlock>
    {`
 let text = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";

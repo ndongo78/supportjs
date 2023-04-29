@@ -1,5 +1,7 @@
 import React from "react";
 import { CodeBlock } from "../CodeBlock";
+import Box from '../../assets/variable.svg'
+import BoxChange from '../../assets/variable-change.svg'
 
 const Variables = () => {
   return (
@@ -16,7 +18,7 @@ const Variables = () => {
           <span className="text-red-600 m-2 font-bold">let</span>,
           <span className="text-red-600 m-2 font-bold">const</span>
         </p>
-<CodeBlock>
+        <CodeBlock>
   {`
   //Comment créer une variable
   var n;
@@ -28,6 +30,25 @@ const Variables = () => {
   console.log(y); //afficher la value x dans la console
 `}
 </CodeBlock>
+        <p>Par exemple, la variable message peut être imaginée comme une boîte étiquetée “message” avec la valeur “Hello!” à l’intérieur :</p>
+        <CodeBlock>
+  {`let message ="hello"`}
+</CodeBlock>
+        <div className="">
+          <img src={Box} alt="" color="black" />
+        </div>
+        <p>
+        Nous pouvons mettre n’importe quelle valeur dans la boîte.
+<br />
+On peut aussi le changer autant de fois qu’on veut :
+      </p>
+  <CodeBlock>
+  {`let message ="world"`}
+</CodeBlock>
+      <div className="">
+          <img src={BoxChange} alt="" color="black" />
+        </div>
+
       </div>
       <div className="">
         <h3 className="text-xl font-bold m-5 text-blue-600">NB</h3>
@@ -58,16 +79,28 @@ const Variables = () => {
           <li className="text-[18px] m-1">
             Les noms sont sensibles à la casse (y et Y sont des variables
             différentes).
+            <p>exemple: Des variables nommées person et PERSON sont deux variables différentes.</p>
           </li>
           <li className="text-[18px] m-1">
             Les mots réservés (comme les mots clés JavaScript) ne peuvent pas
             être utilisés comme noms.
+            <p>exemple: Par exemple, les mots let, class, return, function sont réservés</p>
+<CodeBlock>
+{
+`
+//Le code ci-dessous donne une erreur de syntaxe :
+
+let let = 5; // impossible de nommer une variable "let", erreur!
+let return = 5; // on ne peut pas la nommer "return" aussi, erreur!
+`
+}
+</CodeBlock>
           </li>
         </ul>
       </div>
       <div className=" flex justify-start flex-col">
         <h2 className="text-xl font-bold m-5 text-blue-600">
-          Les mots clés: <span className="text-red-600 m-2 font-bold">let</span>
+          Les mots clés: 
           ,<span className="text-red-600 m-2 font-bold">const</span>
         </h2>
         <div className="ml-6 text-xl">
@@ -91,14 +124,22 @@ const Variables = () => {
             bloc .
           </p>
         </div>
+        <p>
+          Nous pouvons déclarer des variables pour stocker des données. Cela peut être fait en utilisant <span className="text-red-600">var</span> ou <span className="text-red-600">let</span> ou <span className="text-red-600">const</span>.
+<br />
+ <span className="text-red-600">let</span>  – est une déclaration de variable moderne. <br />
+ <span className="text-red-600">var</span> – est une déclaration de variable old-school. Normalement, nous ne l’utilisons pas du tout. <br />
+ <span className="text-red-600">const</span> – est équivalent à <span className="text-red-600">let</span>, mais la valeur de la variable ne peut pas être modifiée. <br />
+Les variables doivent être nommées d’une manière qui nous permet de comprendre facilement ce qui est à l’intérieur.
+          </p>
       </div>
-      <CodeBlock>
-        {`
-            const person= "john";
-            person="bill";
-            //cela generera une erreur
-          `}
-      </CodeBlock>
+<CodeBlock>
+{`
+const person= "john";
+person="bill";
+//cela generera une erreur
+`}
+</CodeBlock>
              <h2 className="text-2xl font-bold m-5">Types de données JavaScript</h2>
         <p>
         Une valeur en JavaScript est toujours d’un certain type. Par exemple, une chaîne de caractères ou un nombre.
@@ -106,38 +147,106 @@ const Variables = () => {
         <p className="text-xl m-3 font-bold text-blue-600">
           JavaScript a 8 types de données
         </p>
-        <ol className="text-xl">
-          <li>1 String</li>
-          <li>2 Number</li>
-          <li>3 Boolean</li>
-          <li>4 Bigint</li>
-          <li>5 Null</li>
-          <li>6 Undefined</li>
-          <li>7 Symbol</li>
-          <li>8 Object</li>
-        </ol>
+            <ol className="text-xl m-3">
+              <li>1 String</li>
+              <li>2 Number</li>
+              <li>3 Boolean</li>
+              <li>4 Bigint</li>
+              <li>5 Null</li>
+              <li>6 Undefined</li>
+              <li>7 Symbol</li>
+              <li>8 Object</li>
+            </ol>
         <h4 className="text-xl m-3 font-bold text-blue-600">
           Le type de données d'objet
         </h4>
         <p className="text-xl m-3">Peut contenir </p>
-        <ol className="text-xl">
+        <ol className="text-xl m-3">
           <li>1 Object</li>
           <li>2 Array</li>
           <li>3 Date</li>
         </ol>
-        <h4>Exemple</h4>
+        
         <>
-          <div className="p-2">
-            <CodeBlock>
-              {`
+    <div className="p-2">
+    <h4 className=" text-xl m-3 text-red-500">Number</h4>
+    <p>
+    Le type number sert à la fois à des nombres entiers et à des nombres à virgule flottante.
+ <br />
+Il existe de nombreuses opérations pour les nombres, par ex. multiplication *, division /, addition +, soustraction - et ainsi de suite.
+<br />
+Outre les nombres réguliers, il existe des “valeurs numériques spéciales” qui appartiennent également à ce type: Infinity, -Infinity et NaN.
+            </p>
+<CodeBlock>
+{`
 //Numbers
 let x=12;
 var y=1.23;
 `}
-            </CodeBlock>
+</CodeBlock>
+  <p>
+  NaN représente une erreur de calcul. C’est le résultat d’une opération mathématique incorrecte ou non définie, par exemple 
+  <CodeBlock>
+{`
+//Nan
+   let x= "12" / 2
+   console.log(x) // return NaN
+`}
+</CodeBlock>
+  </p>
+  <h4 className=" text-xl m-3 text-red-500">String</h4>
+  <p>
+    Une chaîne de caractères en JavaScript doit être entre guillemets.
+    <CodeBlock>
+{`
+   let x= "12" 
+   let x= '12' 
+`}
+</CodeBlock>
+</p>
+<h4 className=" text-xl m-3 text-red-500">Boolean</h4>
+<p>
+Le type booléen n’a que deux valeurs: true et false.
+<br />
+Ce type est couramment utilisé pour stocker des valeurs oui / non: true signifie “oui, correct” et false signifie “non, incorrect”
+<CodeBlock>
+  {
+    `
+let nameFieldChecked = true; // oui, le champ de nom est coché
+let ageFieldChecked = false; // non, le champ d'âge n'est pas coché
+    `
+  }
+</CodeBlock>
+</p>
+<h4 className=" text-xl m-3 text-red-500">Null et Undefined</h4>
+<p>
+La valeur spéciale null n’appartient à aucun type de ceux décrits ci-dessus.
+<br />
+Il forme un type bien distinct qui ne contient que la valeur null :
+{
+    `
+    let age = null;
+    `
+  }
+</p>
+<p>
+La valeur spéciale undefined se distingue des autres. C’est un type à part entière, comme null.
+<br />
+La signification de undefined est “la valeur n’est pas attribuée”.
+<br />
+Si une variable est déclarée mais non affectée, alors sa valeur est exactement undefined :
+{
+    `
+    let age;
+    console.log(age); // affiche "undefined"
+    `
+  }
+</p>
           </div>
           {/* ob */}
           <div className="p-2">
+          <h4 className=" text-xl m-3 text-red-500">Object</h4>
+            <p>les objets servent à stocker des collections de données et des entités plus complexes.</p>
             <CodeBlock>
               {`
 //Strings
@@ -146,15 +255,7 @@ let color="green";
 `}
             </CodeBlock>
           </div>
-          <div className="p-2">
-            <CodeBlock>
-              {`
-// Booleans
-let isValid =true;
-let isRed=false;
-`}
-            </CodeBlock>
-          </div>
+
           <div className="p-2">
             <CodeBlock>
               {`
@@ -169,12 +270,12 @@ colorYeux: "marron"
           </div>
           <div className="p-2">
             <p className=" opacity-90 text-green-500 ml-5"></p>
-            <CodeBlock>
-              {`
+<CodeBlock>
+{`
 // Array
 const fruits=["banana", "cerise", "orange", "mango"]
 `}
-            </CodeBlock>
+</CodeBlock>
           </div>
           <div className="p-2">
             <CodeBlock className={"first-letter"}>
@@ -184,6 +285,7 @@ const fruits=["banana", "cerise", "orange", "mango"]
               }
             </CodeBlock>
           </div>
+
         </>
         {/* typeOf */}
         <h4 className="text-xl m-3 font-bold text-blue-600">
