@@ -16,6 +16,7 @@ import Introduction from '../js/dom/Introduction'
 import Modifier from '../js/dom/Modifier'
 import Evenements from '../js/dom/Evenements'
 import Login from '../login/Login'
+import {Recherche} from "../js/dom/Recherche";
 
 export const RouteNavigation = () => {
   return (
@@ -36,6 +37,7 @@ export const RouteNavigation = () => {
      <Route  path='/introduction' element={<Introduction/>}  />
      <Route  path='/change' element={<Modifier/>}  />
      <Route  path='/events' element={<Evenements/>}  />
+     <Route  path='/recherche' element={<Recherche/>}  />
     </Routes>
   )
 }

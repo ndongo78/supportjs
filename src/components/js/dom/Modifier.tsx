@@ -24,6 +24,9 @@ document.getElementById("p1").innerHTML = "New text!";
 `}
 </CodeBlock>
       <h3 className='text-2xl font-bold text-blue-600 m-5'>Modification de la valeur d'un attribut</h3>
+        <p>
+            <span className="text-red-600">element.setAttribute(attribute)</span> : Permet de modifier l'attribute de l'élément.
+        </p>
       <p>Cet exemple modifie la valeur de l'attribut src d'un {`<img>`}élément</p>
 <CodeBlock>
 {`
@@ -42,6 +45,38 @@ document.getElementById("myImage").src = "landscape.jpg";
 `}
 </CodeBlock>
       <h3 className='text-2xl font-bold text-blue-600 m-5'>Ajouter contenu dans le dom</h3>
+        <p>
+            <span className="text-red-600">document.createElement(tag)</span> : Permet de creer un nouveau noeud élément avec la balise.
+        </p>
+        <p>
+            <span className="text-red-600">document.createTextNode(text)</span> : Permet de creer un nouveau noeud de text.
+        </p>
+        <p>
+            Pour insérer le nouveau element dans le dom nous utilisons: <br/>
+            <span className="text-red-600">element.append(text)</span> : ajouter des nœuds ou des chaînes de caractères à la fin. <br/>
+            <span className="text-red-600">element.prepend(text)</span> : insérer des nœuds ou des chaînes de caractères au début. <br/>
+            <span className="text-red-600">element.before(text)</span> : insérer des nœuds ou des chaînes de caractères avant le node. <br/>
+            <span className="text-red-600">element.after(text)</span> : insérer des nœuds ou des chaînes de caractères aprés le node. <br/>
+            <span className="text-red-600">element.replaceWith(text)</span> : remplace node avec les nœuds ou chaînes de caractères. <br/>
+
+        </p>
+        <p>
+            <span className="text-red-600">insertAdjacentHTML() </span> : analyse le texte spécifié en tant que HTML ou XML et insère les noeuds résultants dans le DOM à la position spécifiée.
+            <CodeBlock>
+{
+`
+element.insertAdjacentHTML(position, text);
+
+`
+}
+            </CodeBlock>
+            <ul>
+                <li> <span className="text-red-600">'beforebegin'</span>  Avant l'element lui-même. </li>
+                <li> <span className="text-red-600">'afterbegin'</span>  Juste à l'intérieur de l'element , avant son premier enfant. </li>
+                <li> <span className="text-red-600">'beforeend'</span>   Juste à l'intérieur de l'element , après son dernier enfant. </li>
+                <li> <span className="text-red-600">'afterend'</span>    Après element lui-même.</li>
+            </ul>
+        </p>
 <CodeBlock>
 {`
 <!DOCTYPE html>
